@@ -56,7 +56,7 @@ export default function MarketDetailPage({
 
   const source = market ? getDataSourceById(market.dataSourceId) : null;
   const targetPrice = market
-    ? Number(market.targetPrice) / Number(PRICE_PRECISION)
+    ? Number(market.targetPrice) / 1_000_000
     : 0;
 
   useEffect(() => {
